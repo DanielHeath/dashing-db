@@ -28,6 +28,10 @@ In your dashing `config.ru`:
   Sinatra::Application.set history: Dashing::Db::History.new(db)
   Sinatra::Application.set history_file: "/dev/null"
 ```
+
+Feel free to use any database you feel like (as long as Sequel can connect to it).
+Note that sqlite won't work with passenger as sqlite doesn't handle multiple processes accessing the same database and passenger runs multiple processes.
+
 ## Contributing
 
 1. Fork it ( http://github.com/<my-github-username>/dashing-db/fork )
