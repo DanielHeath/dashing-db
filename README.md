@@ -1,7 +1,10 @@
 # Dashing::Db
 
 Backs Dashing dashboards onto a database instead of a filestore.
-You want this (or something like it) if you're using Passenger to run Dashing.
+
+Makes deployment easier since it doesn't matter if history.yml gets overwritten.
+
+Also makes deployment with passenger easier (still a PITA due to rufus-scheduler conflicting with the default PassengerSpawnMode)
 
 ## Installation
 
